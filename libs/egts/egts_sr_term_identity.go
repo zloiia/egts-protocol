@@ -144,7 +144,7 @@ func (e *SrTermIdentity) Encode() ([]byte, error) {
 			return result, fmt.Errorf("Не удалось записать IMEI при авторизации")
 		}
 		if wbb < 15 {
-			tmp := make([]byte, 16-wbb)
+			tmp := make([]byte, 15-wbb)
 			buf.Write(tmp)
 		}
 	}
